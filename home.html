@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title> TASK 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+        *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        }
+        .header {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 20px 10px;
+        }
+
+        .header a {
+        float: left;
+        color: rgb(206, 164, 164);
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px; 
+        border-radius: 4px;
+        }
+
+        .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+        color:rgb(206, 164, 164);
+        }
+
+        .header a:hover {
+        background-color: rgb(206, 164, 164);
+        color: #fff;
+        }
+
+        .header a.active {
+        background-color: rgb(206, 164, 164);
+        color: white;
+        }
+        .header a.active:hover{
+        background-color: rgb(206, 164, 164);
+        color:antiquewhite;
+        }
+
+        .header-right {
+        float: right;
+        }
+        body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: rgb(222, 210, 210);
+        }
+        .container{
+        max-width: 500px;
+        width: 100%;
+        background-color: #fff;
+        padding: 25px 30px;
+        border-radius: 5px;
+        }
+        .container .title{
+        font-size: 25px;
+        }
+        .content form .user-details{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        margin: 20px 0 12px 0;
+        }
+        form .user-details .input-box{
+        margin-bottom: 15px;
+        width: calc(100% / 2 - 20px);
+        }
+        .user-details .input-box input{
+        height: 45px;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 5px;
+        padding-left: 15px;
+        border: 1px solid #ccc;
+        border-bottom-width: 2px;
+        }
+        form .gender-details .gender-title{
+        font-size: 20px;
+        font-weight: 500;
+        }
+        form .category{
+        display: flex;
+        width: 65%;
+        margin: 14px;
+        justify-content: space-between;
+        }
+        form .category label{
+        display: flex;
+        }
+        form .category label .dot{
+        height: 14px;
+        width: 14px;
+        border-radius: 50%;
+        margin-right: 5px;
+        background: #d9d9d9;
+        border: 3px solid transparent;
+        transition: all 0.3s ease;
+        }
+        #dot-1:checked ~ .category label .one,
+        #dot-2:checked ~ .category label .two{
+        background: rgb(183, 169, 169);
+        border-color: #d9d9d9;
+        }
+        form input[type="radio"]{
+        display: none;
+        }
+        form .button{
+        height: 45px;
+        margin: 35px;
+        }
+        form .button input{
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        font-size: 18px;
+        background-color: rgb(222, 210, 210);
+        }
+        form .button input:hover{
+        background-color: grey;
+        color: black;
+        }
+        footer{
+          position: fixed;
+          bottom:0;
+          width: 100%;
+          background-color: rgb(222, 210, 210);
+        }
+        .footercontainer{
+          width: 100%;
+          padding: 5px 5px 5px ;
+        }
+        .socialicons{
+          display: flex;
+          justify-content: center;
+        }
+        .socialicons a{
+          padding:  10px;
+          background-color: white;
+          margin: 10px;
+          border-radius: 50%;
+        }
+        .socialicons a i{
+          font-size: 20px;
+          color: #443f3f;
+        }
+        .socialicons a:hover{
+          background-color: #6e5050;
+        }
+        .socialicons a:hover i{
+          color: white;
+        }
+        .footerbottom{
+          background-color: #8d8282;
+          padding: 20px;
+          text-align: center;
+        }
+        .footerbottom p{
+           color: white;
+        }
+     </style>
+   </head>
+<body>
+    <div class="header">
+        <a href="#default" class="logo">TASK 1</a>
+        <div class="header-right">
+          <a class="active" href="home.html">Home</a>
+          <a href="contact.html">Contact</a>
+          <a href="">About</a>
+        </div>
+    </div>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="tel" placeholder="Enter your Phone Number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Confirm your password" required>
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+ </div>
+  <footer>
+    <div class="footercontainer">
+      <div class="socialicons">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-google-plus"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footerbottom">
+      <p>Copyright &copy;2024; Designed by <span class="designer">ABCD</span></p>
+  </div>
+  </footer>
+</body>
+</html>

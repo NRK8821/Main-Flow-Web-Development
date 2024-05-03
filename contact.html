@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .contact{
+            min-height: 100vh;
+            background:rgb(222, 210, 210);
+            padding: 50px;
+            text-align: center;
+        }
+        .container{
+            max-width: 800px;
+            margin:0 auto;
+        }
+        .container h2{
+            font-size: 36px;
+            margin-bottom: 40px;
+            color:#64525f;
+        }
+        .contact-wrapper{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+        .contact-form{
+            text-align: left;
+        }
+        .contact-form h3{
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #64525f;
+        }
+        .form-group{
+            margin-bottom: 20px;
+        }
+        input,textarea{
+            width: 100%;
+            padding:12px;
+            border-radius: 8px;
+            border: none;
+            background-color: #f8f9fa;
+            color: #686262;
+        }
+        input:focus,textarea:focus{
+            outline: none;
+            box-shadow: 0 0 8px #bbb;
+        }
+        button{
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        } 
+        button:hover{
+            background:linear-gradient(140deg,rgb(185, 174, 102),rgb(227, 226, 184));
+            color: #111;
+        }
+        .contact-info{
+            text-align: left;
+        }
+        .contact-info h3{
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #64525f;
+        }
+        .contact-info p{
+            margin-bottom: 10px;
+            color:#64525f;
+        }
+        .contact-info i{
+            color: #45a050;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-phone"></i> 8567489658</p>
+                    <p><i class="fas fa-envelope"></i>task1@email.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i>123 Street,Shanthi Nagar,Bengaluru</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
