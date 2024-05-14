@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Contact Us</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <style>
+          *{
+              margin:0px;
+              padding:0px;
+              box-sizing: border-box;
+              font-family: sans-serif;
+          }
+          .header {
+          overflow: hidden;
+          background-color: #f7f4f4;
+          position: fixed;
+          top: 0;
+          width: 100%;
+          padding: 20px 10px;
+          }
+
+          .header a {
+          float: left;
+          color: rgb(41, 40, 40);
+          text-align: center;
+          padding: 12px;
+          text-decoration: none;
+          font-size: 18px; 
+          border-radius: 4px;
+          }
+
+          .header a.logo {
+          font-size: 25px;
+          font-weight: bold;
+          color:#222;
+          }
+          .header a.logo:hover{
+            background-color: rgb(185, 174, 104);
+            color: black;
+          }
+          .header a:hover {
+          background-color: rgb(185, 174, 104);
+          color: #fff;
+          }
+
+          .header a.active {
+          background-color: rgb(119, 119, 119);
+          color: rgb(254, 254, 254);
+          }
+          .header a.active:hover{
+          background:linear-gradient(140deg,rgb(185, 174, 102),rgb(227, 226, 184));
+          color:#fff;
+          }
+
+          .header-right {
+          float: right;
+          }
+          body{
+              height: 100vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 10px;
+              background:linear-gradient(145deg,rgb(150, 143, 90),rgb(227, 236, 174));
+          }
+          .contact{
+              max-width: 800px;
+              width: 100%;
+              text-align: center;
+              background-color: #fafafa;
+              padding: 25px 30px;
+              border-radius: 5px;
+          }
+          .container{
+              max-width: 800px;
+              margin:0 auto;
+          }
+          .container h2{
+              font-size: 35px;
+              margin-bottom: 40px;
+              color:#414141;
+          }
+          .contact-wrapper{
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-gap: 30px;
+          }
+          .contact-form{
+              text-align: left;
+          }
+          .contact-form h3{
+              font-size: 24px;
+              margin-bottom: 20px;
+              color: #414141;
+          }
+          .form-group{
+              margin-bottom: 20px;
+          }
+          input,textarea{
+              width: 100%;
+              padding:12px;
+              border-radius: 8px;
+              border: 2px solid #ccc;
+              background-color: #f8f9fa;
+              color: #414141;
+          }
+          button{
+              display: inline-block;
+              padding: 12px 24px;
+              background-color: #4caf50;
+              color: #fff;
+              border: none;
+              cursor: pointer;
+          } 
+          button:hover{
+              background:linear-gradient(140deg,rgb(185, 174, 102),rgb(227, 226, 184));
+              color: #111;
+          }
+          .contact-info{
+              text-align: left;
+              padding-left: 50px;
+          }
+          .contact-info h3{
+              font-size: 25px;
+              margin-bottom: 20px;
+              color: #414141;
+          }
+          .contact-info p{
+              margin-bottom: 20px;
+              color:#414141;
+          }
+          .contact-info i{
+              color: #45a050;
+              margin-right: 10px;
+          }
+          footer{
+            position: fixed;
+            bottom:0;
+            width: 100%;
+            background-color: rgb(97, 97, 97);
+          }
+          .footercontainer{
+            width: 100%;
+            padding: 5px 5px 5px ;
+          }
+          .socialicons{
+            display: flex;
+            justify-content: center;
+          }
+          .socialicons a{
+            padding:  10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+          }
+          .socialicons a i{
+            font-size: 20px;
+            color: #443f3f;
+          }
+          .socialicons a:hover{
+            background-color: rgb(185, 174, 102);
+          }
+          .socialicons a:hover i{
+            color: white;
+          }
+          .footerbottom{
+            background-color: #414141;
+            padding: 20px;
+            text-align: center;
+          }
+          .footerbottom p{
+            color: #f1f1f1;
+          }
+          @media(max-width: 780px){
+          .header a {
+          padding: 8px 12px;
+          font-size: 16px; 
+          margin-right: 8px; 
+          }
+          .container{
+              padding: 10px;
+          }
+          .footerbottom p {
+          font-size: 14px; 
+          }
+          }
+          @media(max-width: 480px){
+            .header {
+            padding: 5px; 
+            }
+            .header a {
+            padding: 5px 8px; 
+            font-size: 15px; 
+            }
+            .container{
+              max-width: 95%;
+              padding: 10px;
+            }
+            .container h2 {
+              font-size: 25px;
+              margin-bottom: 5px;
+            }
+            .contact-form h3{
+              font-size: medium;
+            }
+            .contact-info {
+              padding-left: 0;
+            }
+            .contact-info p {
+              margin-bottom: 10px;
+            }
+            .contact-wrapper{
+              grid-template-columns: 1fr;
+            }
+            .footercontainer{
+              padding: 0;
+            }
+            .footerbottom{
+              padding: 10px;
+            }
+            .socialicons a {
+            padding: 5px; 
+            margin: 5px; 
+            }
+            .footerbottom p {
+            font-size: 12px; 
+            }
+          }
+      </style>
+  </head>
+  <body>
+      <div class="header">
+          <a href="home_2.html" class="logo">TASK 2</a>
+          <div class="header-right">
+            <a class="active" href="home_2.html">Home</a>
+            <a href="contact_2.html">Contact</a>
+            <a href="">About</a>
+          </div>
+      </div>
+      <section class="contact">
+          <div class="container">
+              <h2>Contact Us</h2>
+              <div class="contact-wrapper">
+                  <div class="contact-form">
+                      <h3>Send us a message</h3>
+                      <form>
+                          <div class="form-group">
+                              <input type="text" name="name" placeholder="Your Name">
+                          </div>
+                          <div class="form-group">
+                              <input type="email" name="email" placeholder="Your Email">
+                          </div>
+                          <div class="form-group">
+                              <textarea name="message" placeholder="Your Message"></textarea>
+                          </div>
+                          <button type="submit">Send Message</button>
+                      </form>
+                  </div>
+                  <div class="contact-info">
+                      <h3>Contact Information</h3>
+                      <p><i class="fas fa-phone"></i> 8567489658</p>
+                      <p><i class="fas fa-envelope"></i>task1@email.com</p>
+                      <p><i class="fas fa-map-marker-alt"></i>123 Street,Shanthi Nagar,Bengaluru</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <footer>
+          <div class="footercontainer">
+            <div class="socialicons">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-google-plus"></i></a>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footerbottom">
+            <p>Copyright &copy;2024; Designed by <span class="designer">ABCD</span></p>
+        </div>
+        </footer>
+  </body>
+</html>
