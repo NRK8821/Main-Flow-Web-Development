@@ -1,0 +1,25 @@
+/* Styling for individual image items */
+.image-item {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-item img {
+  width: 300px; /* Set a standard width for images */
+  height: 300px; /* Set a standard height for images */
+  object-fit: cover;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.image-item img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.image-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
